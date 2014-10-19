@@ -1,0 +1,4 @@
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_3\IMyInterface\bin\Debug\Interface.dll
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_3\IMyInterface\bin\Debug\Interface.pdb
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_3\IMyInterface\obj\Debug\Interface.dll
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_3\IMyInterface\obj\Debug\Interface.pdb

@@ -2,6 +2,17 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bionic_3", "Bionic_3\Bionic_3.csproj", "{1B5022E4-EF30-44AE-BBC0-249A1F75C549}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EB317C1D-CCFD-455B-AA9D-3C817966CF02} = {EB317C1D-CCFD-455B-AA9D-3C817966CF02}
+		{91E3E585-9167-40EA-9B39-03B06A7A1F68} = {91E3E585-9167-40EA-9B39-03B06A7A1F68}
+		{996C00AF-EFE2-443C-A232-920DA07D35D8} = {996C00AF-EFE2-443C-A232-920DA07D35D8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "first_plugin", "first_dll_proj\first_plugin.csproj", "{996C00AF-EFE2-443C-A232-920DA07D35D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "IMyInterface\Interface.csproj", "{EB317C1D-CCFD-455B-AA9D-3C817966CF02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "second_plugin", "second_plugin\second_plugin.csproj", "{91E3E585-9167-40EA-9B39-03B06A7A1F68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +24,18 @@ Global
 		{1B5022E4-EF30-44AE-BBC0-249A1F75C549}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B5022E4-EF30-44AE-BBC0-249A1F75C549}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B5022E4-EF30-44AE-BBC0-249A1F75C549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{996C00AF-EFE2-443C-A232-920DA07D35D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{996C00AF-EFE2-443C-A232-920DA07D35D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{996C00AF-EFE2-443C-A232-920DA07D35D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{996C00AF-EFE2-443C-A232-920DA07D35D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB317C1D-CCFD-455B-AA9D-3C817966CF02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB317C1D-CCFD-455B-AA9D-3C817966CF02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB317C1D-CCFD-455B-AA9D-3C817966CF02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB317C1D-CCFD-455B-AA9D-3C817966CF02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91E3E585-9167-40EA-9B39-03B06A7A1F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E3E585-9167-40EA-9B39-03B06A7A1F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E3E585-9167-40EA-9B39-03B06A7A1F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E3E585-9167-40EA-9B39-03B06A7A1F68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
