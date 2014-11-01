@@ -1,0 +1,7 @@
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_4\second_plugin\bin\Debug\second_plugin.dll
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_4\second_plugin\bin\Debug\second_plugin.pdb
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_4\second_plugin\bin\Debug\Interface.dll
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_4\second_plugin\bin\Debug\Interface.pdb
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_4\second_plugin\obj\Debug\second_plugin.csprojResolveAssemblyReference.cache
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_4\second_plugin\obj\Debug\second_plugin.dll
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_4\second_plugin\obj\Debug\second_plugin.pdb

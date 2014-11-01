@@ -1,0 +1,5 @@
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_4\IMyInterface\bin\Debug\Interface.dll
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_4\IMyInterface\bin\Debug\Interface.pdb
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_4\IMyInterface\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_4\IMyInterface\obj\Debug\Interface.dll
+C:\Users\datrax\Documents\GitHub\Bionic\Bionic_4\IMyInterface\obj\Debug\Interface.pdb
