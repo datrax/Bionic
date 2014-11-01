@@ -12,7 +12,7 @@ namespace Bionic7
 {
     class Program
     {
-   
+
         static void Main(string[] args)
         {
             Dictionary<string, int> dic = new Dictionary<string, int>();
@@ -21,7 +21,7 @@ namespace Bionic7
                 Console.WriteLine("Directory \"htmls\" hasn't been found");
                 return;
             }
-            string[] filetype = ConfigurationSettings.AppSettings["filetype"].Split(';') ;
+            string[] filetype = ConfigurationSettings.AppSettings["filetype"].Split(';');
             string[] dirs = new string[0];
             foreach (string type in filetype)
             {
@@ -30,17 +30,17 @@ namespace Bionic7
             }
 
 
-           
+
             foreach (string dir in dirs)
             {
-                Console.WriteLine("file detected: " + dir.Substring(dir.LastIndexOf("\\")+1));
+                Console.WriteLine("file detected: " + dir.Substring(dir.LastIndexOf("\\") + 1));
                 StreamReader re = new StreamReader(dir);
                 RegexOptions options = System.Text.RegularExpressions.RegexOptions.Singleline;
                 MatchCollection links = Regex.Matches(re.ReadToEnd().ToString(), "(?<=href=\")(.*?)(?=\")", options);//regular expression that returns link             
-                
+
                 foreach (Match link in links)
                 {
-                    string linkstring=Regex.Replace(link.ToString(), "\r\n", String.Empty);//delete all end of lines in the link
+                    string linkstring = Regex.Replace(link.ToString(), "\r\n", String.Empty);//delete all end of lines in the link
                     if (dic.ContainsKey(linkstring))
                         dic[linkstring]++;
                     else dic.Add(linkstring, 1);
@@ -49,7 +49,7 @@ namespace Bionic7
             }
             foreach (KeyValuePair<string, int> kvp in dic)
             {
-                Console.WriteLine(kvp.Key+" found "+kvp.Value+" times");
+                Console.WriteLine(kvp.Key + " found " + kvp.Value + " times");
             }
             Console.ReadLine();
         }
