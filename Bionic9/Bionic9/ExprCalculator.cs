@@ -130,8 +130,7 @@ namespace Bionic9
             }
             catch (Exception e)
             {
-                MessageBoxResult result = MessageBox.Show(e.Message, "Error", MessageBoxButton.OK);
-                return 0;
+                throw;
             }
 
         }

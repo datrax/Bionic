@@ -28,17 +28,12 @@ namespace Bionic9
 
         private void CalculateExpression(object sender, RoutedEventArgs e)
         {
-            string str = CheckInputString();
-            if (str == "error")
+
+            try
             {
-                MessageBoxResult result = MessageBox.Show("Try input again", "Error", MessageBoxButton.OK);
-                return;
-            }
-            else
-            {
-                ExprCalculator expcalculat = new ExprCalculator(str);
+                ExprCalculator expcalculat = new ExprCalculator(CheckInputString(input.Text));
                 double calculateResult = expcalculat.Calculate();
-                double numerat,denominat;
+                double numerat, denominat;
                 MakeFraction(calculateResult, out numerat, out denominat);
 
 
@@ -51,6 +46,15 @@ namespace Bionic9
 
                     separator.Content = "-----";
                 }
+
+            }
+            catch (Exception ex)
+            {
+                ErrorBlock.Text = ex.Message;
+                wholepart.Content = "";
+                numerator.Content = "";
+                denominator.Content = "";
+                separator.Content = "";
             }
         }
         private void MakeFraction(double calculateResult, out double num, out double den)
@@ -70,37 +74,78 @@ namespace Bionic9
                 }
                 ReduceFraction(ref num, ref den);
             }
-           
+
         }
         private void ReduceFraction(ref double num, ref double den)
         {
-            for (int i = 1; i <= num; i++)
+            num = (int)num;
+            den = (int)den;
+            for (int i = (int)num; i >= 1; i--)
                 if (num % i == 0 && den % i == 0)
                 {
                     num /= i;
                     den /= i;
                 }
-            num = (int)num;
-            den = (int)den;
+           
         }
 
-        private string CheckInputString()
+        private string CheckInputString(string checkedString)
         {
-            string checkedString = input.Text;
-            if (checkedString[0].Equals('*') || checkedString[0].Equals('/') ||
-                checkedString[checkedString.Length - 1].Equals('*') || checkedString[checkedString.Length - 1].Equals('/'))
-                return "error";
-            for (int i = 0; i < checkedString.Length - 1; i++)
+            try
             {
-                if ((checkedString[i] == '*' || checkedString[i] == '/' || checkedString[i] == '+' || checkedString[i] == '-')&&
-                    (checkedString[i+1] == '*' || checkedString[i+1] == '/' || checkedString[i+1] == '+' || checkedString[i+1] == '-'))
-                    return "error";
+
+                if (checkedString[0].Equals('*') || checkedString[0].Equals('/') ||
+                    checkedString[checkedString.Length - 1].Equals('*') || checkedString[checkedString.Length - 1].Equals('/'))
+                    throw new Exception("Wrong input format");
+
+
+                for (int i = 0; i < checkedString.Length - 1; i++)
+                {
+                    if ((checkedString[i] == '*' || checkedString[i] == '/' || checkedString[i] == '+' || checkedString[i] == '-') &&
+                        (checkedString[i + 1] == '*' || checkedString[i + 1] == '/' || checkedString[i + 1] == '+' || checkedString[i + 1] == '-'))
+                    {
+                        throw new Exception("Wrong input format");
+                    }
+
+                }
+                char LastSymbol = '-';
+                int leftScopeAmount = 0;
+                int rightScopeAmount = 0;
+                foreach (char sym in checkedString)
+                {
+                    if ((sym == '('  && LastSymbol==')')||(sym == ')'  && LastSymbol=='('))
+                        throw new Exception("Wrong input format");
+                    if (sym == '(')
+                    {
+                        leftScopeAmount++;
+                    }
+                    else
+                        if (sym == ')')
+                        {
+                            if (leftScopeAmount > 0 && (rightScopeAmount - leftScopeAmount != 0))
+                                rightScopeAmount++;
+                            else
+                            {
+                                throw new Exception("Wrong input format");
+                            }
+                        }
+ 
+                    LastSymbol=sym;
+                }
+                if (leftScopeAmount != rightScopeAmount)
+                    throw new Exception("Some scopes aren't close");
+                return checkedString;
             }
-            return checkedString;
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
+          
+            ErrorBlock.Text = "";
             input.Text += ((Button)sender).Content;
         }
 
@@ -111,10 +156,12 @@ namespace Bionic9
             numerator.Content = "";
             denominator.Content = "";
             separator.Content = "";
+            ErrorBlock.Text = "";
         }
 
         private void DeleteLatSymbol(object sender, RoutedEventArgs e)
         {
+            ErrorBlock.Text = "";
             if (input.Text.Length > 0)
                 input.Text = input.Text.Substring(0, input.Text.Length - 1);
         }
