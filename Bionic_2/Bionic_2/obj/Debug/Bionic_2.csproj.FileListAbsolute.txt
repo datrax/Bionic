@@ -1,6 +1,0 @@
-c:\users\datrax\documents\visual studio 2012\Projects\Bionic_2\Bionic_2\bin\Debug\Bionic_2.exe.config
-c:\users\datrax\documents\visual studio 2012\Projects\Bionic_2\Bionic_2\bin\Debug\Bionic_2.exe
-c:\users\datrax\documents\visual studio 2012\Projects\Bionic_2\Bionic_2\bin\Debug\Bionic_2.pdb
-c:\users\datrax\documents\visual studio 2012\Projects\Bionic_2\Bionic_2\obj\Debug\Bionic_2.csprojResolveAssemblyReference.cache
-c:\users\datrax\documents\visual studio 2012\Projects\Bionic_2\Bionic_2\obj\Debug\Bionic_2.exe
-c:\users\datrax\documents\visual studio 2012\Projects\Bionic_2\Bionic_2\obj\Debug\Bionic_2.pdb

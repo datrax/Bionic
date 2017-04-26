@@ -1,5 +1,0 @@
-C:\Users\datrax\Documents\GitHub\Bionic\Bionic8\Bionic7\bin\Debug\Bionic7.exe.config
-C:\Users\datrax\Documents\GitHub\Bionic\Bionic8\Bionic7\obj\Debug\Bionic7.exe
-C:\Users\datrax\Documents\GitHub\Bionic\Bionic8\Bionic7\obj\Debug\Bionic7.pdb
-C:\Users\datrax\Documents\GitHub\Bionic\Bionic8\Bionic7\bin\Debug\Bionic7.exe
-C:\Users\datrax\Documents\GitHub\Bionic\Bionic8\Bionic7\bin\Debug\Bionic7.pdb

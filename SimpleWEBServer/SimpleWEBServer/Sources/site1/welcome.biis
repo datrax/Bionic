@@ -1,0 +1,10 @@
+void Button1_Click(){
+lbl.value="Oh noooo, Ain't I ask you not to do it?";
+}
+void Button2_Click(){
+lbl.value="Greeting from the second button it returns date and time:"+DateTime.Now;
+}
+void Button3_Click(){
+lbl.value="OMG Where's the third button?) ";	
+btn3.value="There's no button in here. I mean it)";
+}
